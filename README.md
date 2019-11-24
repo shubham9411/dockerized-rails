@@ -1,24 +1,18 @@
-# README
+# Readme
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### First time setup without rails app
 
-Things you may want to cover:
+1. Files available for bare minimum execution
+  - Dockerfile
+  - docker-compose.yml
+  - entrypoint.sh
+  - Gemfile (for building the image for the first time)
+  - Gemfile.lock
 
-* Ruby version
+2. Creating rails app
 
-* System dependencies
+`docker-compose run web rails new . --force --no-deps --database=postgresql`
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+3. Create DB and run migration
+`docker-compose run web rake db:create`
+`docker-compose run web rake db:migrate`
