@@ -24,3 +24,6 @@
 `docker-compose up`
 
 5. Goto `http://localhost:3001`.
+
+
+For more: https://docs.docker.com/compose/rails/
